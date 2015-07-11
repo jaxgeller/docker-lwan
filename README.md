@@ -1,8 +1,8 @@
 # docker-lwan
 
-Docker for [lwan server](https://github.com/lpereira/lwan)
+Docker image for the [lwan server](https://github.com/lpereira/lwan)
 
-### Run
+### Use
 
 ```bash
 docker run -d -p 8080:8080 jaxgeller/lwan
