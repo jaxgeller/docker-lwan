@@ -8,6 +8,7 @@ FROM ubuntu:14.04
 
 MAINTAINER jaxgeller
 
+# Install dependencies
 RUN \
   apt-get update && \
   apt-get install -y \
@@ -20,6 +21,7 @@ RUN \
   libmysql++-dev \
   python-pip
 
+# Create directory for mountable files, and build lwan
 RUN \
   git clone git://github.com/lpereira/lwan && \
   cd lwan && \
@@ -29,7 +31,7 @@ RUN \
   make
 
 WORKDIR /lwan
+EXPOSE 80 443 8080
+VOLUME ["/lwan", "/lwan/wwwroot"]
 
-CMD ["build/lwan/lwan"]
-
-EXPOSE 8080
+ENTRYPOINT ["build/lwan/lwan"]
