@@ -13,7 +13,7 @@ docker run -d -p 8080:8080 jaxgeller/lwan
 Custom Files
 
 ```bash
-docker run -d -p 8080:8080 -v cwd:/var/www/html jaxgeller/lwan -r /lwan/wwwroot
+docker run -d -p 8080:8080 -v cwd:/lwan/wwwroot jaxgeller/lwan
 ```
 
 Custom Config
