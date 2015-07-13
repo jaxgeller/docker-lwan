@@ -19,7 +19,7 @@ docker run -d -p 8080:8080 -v cwd:/lwan/wwwroot jaxgeller/lwan
 Custom Config
 
 ```bash
-docker run -d -p 8080:8080 -v cwd:/lwan jaxgeller/lwan
+docker run -d -p 8080:8080 -v cwd/lwan.conf:/lwan/lwan.conf jaxgeller/lwan
 ```
 
 Custom Port
